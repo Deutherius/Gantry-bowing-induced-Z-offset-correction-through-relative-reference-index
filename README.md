@@ -1,5 +1,5 @@
-# Gantry-bowing-induced-Z-offset-compensation
-A guide on how to minimize inconsistent Z offset caused by gantry bowing on klipper machines, particularly Voron 2.4/Trident. Are your first layers squished too much when the printer is too cold (first print of the day), and too far from the bed when it's nice and toasty? Or the other way around? Do you have to heatsoak for hours just to get that nice crisp first layer? Read on.
+# Gantry bowing-induced Z-offset correction through relative reference index
+A guide on how to minimize inconsistent Z offset caused by gantry bowing on Klipper machines, particularly Voron 2.4/Trident. Are your first layers squished too much when the printer is too cold (first print of the day), and too far from the bed when it's nice and toasty? Or the other way around? Do you have to heatsoak for hours just to get that nice crisp first layer? Read on.
 
 # What?
 Does your printer have steel linear rails bolted to aluminium extrusions? Is the entire printer sealed up? Then you might be suffering from gantry bowing due to bimetallic thermal expansion. Read more in ![whoppingpochard's excellent repo](https://github.com/tanaes/whopping_Voron_mods/tree/main/extrusion_backers). I'll keep it short here - if you have your rails mounted on the bottom of your extrusions, as the gantry member heats up, it bows upwards in the middle. If both your X and Y are set up this way, then the combined bowing is most prominent in the middle of the bed, and least prominent in the corners.
@@ -10,8 +10,6 @@ You might have noticed that when you take a bed mesh when the printer is hot, it
 But when your printer is at ambient temp (say, cooled down overnight), the mesh looks more like this:
 
 ![cold_mesh](https://user-images.githubusercontent.com/61467766/132994585-c49b21d7-e49f-4aef-88dd-979ca8468449.JPG)
-
-This is caused by the gantry bowing.
 
 # How the hell does *that* have anything to do with Z offset?!
 
