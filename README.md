@@ -29,7 +29,9 @@ There is another way which worked for me (but I am absolutely definitely not tel
 ## But I load a previously-taken mesh instead of taking one before every print
 
 You shouldn't do that unless you always print from the same start conditions. But if you are a rebel and want to do it anyway, you will have to take a new mesh, the old one is tied to the old RRI (has a 0 in the middle).
-**WARNING** If you set up your mesh at hot thermal equilibrium and then try to use it when the printer is cold, depending on the height delta this **MIGHT** result in a nozzle strike. I *strongly* recommend that you always take a fresh mesh before each print.
+
+#### **WARNING**
+If you set up your mesh at hot thermal equilibrium and then try to use it when the printer is cold, depending on the height delta this **MIGHT** result in a nozzle strike. I *strongly* recommend that you always take a fresh mesh before each print.
 
 ## There is always a catch
 
