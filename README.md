@@ -1,5 +1,5 @@
 # Gantry-bowing-induced-Z-offset-compensation
-A guide on how to minimize inconsistent Z offset caused by gantry bowing on klipper machines, particularly Voron 2.4/Trident. Are your first layers squished too much when the printer is too cold (first print of the day), and too far from the bed when it's nice and toasty? Or the other way around? Do you ahve to heatsoak for hours just to get that nice crisp first layer? Read on.
+A guide on how to minimize inconsistent Z offset caused by gantry bowing on klipper machines, particularly Voron 2.4/Trident. Are your first layers squished too much when the printer is too cold (first print of the day), and too far from the bed when it's nice and toasty? Or the other way around? Do you have to heatsoak for hours just to get that nice crisp first layer? Read on.
 
 # What?
 Does your printer have steel linear rails bolted to aluminium extrusions? Is the entire printer sealed up? Then you might be suffering from gantry bowing due to bimetallic thermal expansion. Read more in ![whoppingpochard's excellent repo](https://github.com/tanaes/whopping_Voron_mods/tree/main/extrusion_backers). I'll keep it short here - if you have your rails mounted on the bottom of your extrusions, as the gantry member heats up, it bows upwards in the middle. If both your X and Y are set up this way, then the combined bowing is most prominent in the middle of the bed, and least prominent in the corners.
@@ -17,7 +17,7 @@ This is caused by the gantry bowing.
 
 You have probably been told to set a thing called "relative\_reference\_index" in your bed_mesh config section to (x points * y points) - 1) / 2. This tells klipper that the middle point of the mesh (usually center of the bed) - exactly where you were probably doing your initial Z offset calibration (with a feeler gauge or a sheet of printer paper) - is Z=0. But in reality, this is the most thermally unstable point of the bed, so your "Z=0" is now a moving target with changing temperature of the gantry members. For reference, on my 300mm V2.4, this difference in Z offset between "heatsoaking for 10 minutes" and "printing for 3 hours" is roughly 80 microns. Sounds little, but it is more than enough to give you a "perfect squish" for the first and "can see the second layer through the first one" for the second option.
 
-Your bed mesh still works fine, you get a (hopefully) consistent first layer - but it will have a *moderately* different Z offset. If you preheat for a long time, this effect is minimized, because you probably have everything set up to work at thermal equilibrium. But if you don't want to waste time heatsoaking for hours, there is a solution.
+Your bed mesh still works fine, you get a (hopefully) consistent first layer - but it will have a *slightly-to-moderately* different global Z offset every time. If you preheat for a long time, this effect is minimized, because you probably have everything set up to work at thermal equilibrium. But if you don't want to waste time heatsoaking for hours, there is a solution.
 
 # What can I do about it?
 You can get gantry backers, which can eliminate most (if not all) of the gantry bowing effects. That is the gucci solution, but costs money, and on large printers it might not be enough.
@@ -31,6 +31,13 @@ There is another way which worked for me (but I am absolutely definitely not tel
 ## But I load a previously-taken mesh instead of taking one before every print
 
 You shouldn't do that unless you always print from the same start conditions. But if you want to do that anyway, you will have to take a new mesh, the old one is tied to the old RRI (and has a 0 in the middle).
+
+## There is always a catch
+
+Yes. If your first layer takes a long time and you don't heatsoak long enough, the gantry bowing will increase *during* the first few layers, but your mesh will stay the same. What can you do about it? Ignore it, heatsoak longer or get gantry backers.
+
+### But there has to be anotehr way?!
+No worries, already working on that, almost finished.
 
 # But my rails are on the top, not on the bottom
 
