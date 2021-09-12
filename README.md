@@ -24,7 +24,7 @@ You can also set the relative reference index to a more thermally stable positio
 ## That's it?
 No! Remember that this directly affects your Z offset, which can cause a catastrophic nozzle strike if you are not careful. It will be best if you redo your Z offset calibration outright (remember to measure in the corner of your choice, not in the middle of the bed!)
 
-There is another way which worked for me (but I am absolutely definitely not telling you to do the same, ever) - take your old bed mesh that works for you (i.e. all your Z offset setup works with *this one mesh*). It has a value of 0 in the middle. The corner of your choice will have a large value, say 0.15 mm. If you now move the RRI to that corner, your middle point will measure -0.15 mm. You need to *add* this value to your position_endstop, i. e. if your old position_endstop was -1.2, it will be -1.35 after changing RRI to the corner. **IF YOU USE A DIFFERENT ENDSTOP SYSTEM, THINK TWICE ABOUT WHAT YOU ARE DOING**. Whatever system you use, your end result needs to be that your nozzle is *further from the bed* than it was before. Be careful, if you are not sure, just redo the Z calibration. I don't want to be responsible for your PEI.
+There is another way which worked for me (but I am absolutely definitely not telling you to do the same, ever) - take your old bed mesh that works for you (i.e. all your Z offset setup works with *this one mesh*). It has a value of 0 in the middle. The corner of your choice will have a large value, say 0.15 mm. If you now move the RRI to that corner (and take the mesh again to update it!), your middle point will measure -0.15 mm. You need to *add* this value to your position_endstop, i. e. if your old position_endstop was -1.2, it will be -1.35 after changing RRI to the corner. **IF YOU USE A DIFFERENT ENDSTOP SYSTEM, THINK TWICE ABOUT WHAT YOU ARE DOING**. Whatever system you use, your end result needs to be that your nozzle is *further from the bed* than it was before. Be careful, if you are not sure, just redo the Z calibration. I don't want to be responsible for your PEI.
 
 ## But I load a previously-taken mesh instead of taking one before every print
 
@@ -45,7 +45,7 @@ No, setting RRI to a corner might not be perfect, but it still helps a ton.
 
 No worries, already working on that, coming soon.
 
-# But my rails are on the top, not on the bottom
+## But my rails are on the top, not on the bottom
 
 The effects will be reversed and your bed mesh probably looks like an upside-down bowl. The main point still stands - the middle of the bed is the most thermally unstable reference for Z=0. Change it to a corner and redo the Z calibration.
 
