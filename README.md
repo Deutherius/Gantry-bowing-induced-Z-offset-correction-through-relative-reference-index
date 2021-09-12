@@ -30,33 +30,43 @@ There is another way which worked for me (but I am absolutely definitely not tel
 
 ## But I load a previously-taken mesh instead of taking one before every print
 
-You shouldn't do that unless you always print from the same start conditions. But if you want to do that anyway, you will have to take a new mesh, the old one is tied to the old RRI (and has a 0 in the middle).
+You shouldn't do that unless you always print from the same start conditions. But if you are a rebel and want to do it anyway, you will have to take a new mesh, the old one is tied to the old RRI (has a 0 in the middle).
 
 ## There is always a catch
 
 Yes. If your first layer takes a long time and you don't heatsoak long enough, the gantry bowing will increase *during* the first few layers, but your mesh will stay the same. What can you do about it? Ignore it, heatsoak longer or get gantry backers.
 
-### But there has to be anotehr way?!
-No worries, already working on that, almost finished.
+### Did you just invalidate this entire thing?
+
+No, setting RRI to a corner might not be perfect, but it still helps a ton.
+
+### But there has to be another way?!
+
+No worries, already working on that, coming soon.
 
 # But my rails are on the top, not on the bottom
 
 The effects will be reversed and your bed mesh probably looks like an upside-down bowl. The main point still stands - the middle of the bed is the most thermally unstable reference for Z=0. Change it to a corner and redo the Z calibration.
 
-# Results
+# Results (yours may vary)
 
 ## RRI in the middle of the bed
 
-Print started from cold printer state (heatsoak for ~10 minutes)
+Print started from cold printer state (heatsoak for ~10 minutes, calibrated for my squish preferences) - this one sparks joy
 
 ![20210822_163323](https://user-images.githubusercontent.com/61467766/132995533-47ec8428-063f-4c85-880f-78b2ce3d32a0.jpg)
 
-Print started from a hot printer state (been printing for hours)
+Print started from a hot printer state (been printing for hours) - this one does not spark joy
 
 ![20210822_163518](https://user-images.githubusercontent.com/61467766/132995554-e72db181-300a-4c9b-8352-a351b62a164b.jpg)
 
 ## RRI far right corner
 
-Print started from cold state
+Print started from a cold state
 
-![20210912_183704](https://user-images.githubusercontent.com/61467766/132995740-e1b15c59-683d-4ec4-91db-03f31db05688.jpg)
+![20210912_190246](https://user-images.githubusercontent.com/61467766/132996368-07eb553e-39a6-4a99-a5ae-365a7c92e510.jpg)
+
+Print started from a hot state
+
+![20210912_190219](https://user-images.githubusercontent.com/61467766/132996429-9d7d6c91-46dc-43c0-b77b-b980c4df47b8.jpg)
+
