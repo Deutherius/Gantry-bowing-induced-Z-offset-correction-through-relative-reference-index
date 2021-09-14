@@ -39,11 +39,11 @@ Yes. If your first layer takes a long time and you don't heatsoak long enough, t
 
 ### Did you just invalidate this entire thing?
 
-No, setting RRI to a corner might not be perfect, but it still helps a ton.
+No, setting RRI to a corner might not be perfect, but it still helps a ton, especially for small footprint objects with short first layer time.
 
 ### But there has to be another way?!
 
-No worries, already working on that, coming soon.
+Yes, there is. You can change the mesh dynamically based on the printer's temperature with ![Virtual Gantry Backers](https://github.com/Deutherius/VGB)! :)
 
 ## But my rails are on the top, not on the bottom
 
