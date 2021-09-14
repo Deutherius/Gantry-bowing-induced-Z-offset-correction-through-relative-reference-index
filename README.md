@@ -2,7 +2,7 @@
 A guide on how to minimize inconsistent Z offset caused by gantry bowing on Klipper machines, particularly Voron 2.4. Are your first layers squished too much when the printer is too cold (first print of the day), and too far from the bed when it's nice and toasty? Or the other way around? Do you have to heatsoak for hours just to get that nice crisp first layer? Read on.
 
 # What?
-Does your printer have steel linear rails bolted to aluminium extrusions? Is the entire printer sealed up? Then you might be suffering from gantry bowing due to bimetallic thermal expansion. Read more in ![whoppingpochard's excellent repo](https://github.com/tanaes/whopping_Voron_mods/tree/main/extrusion_backers). I'll keep it short here - if you have your rails mounted on the bottom of your extrusions, as the gantry member heats up, it bows upwards in the middle. If both your X and Y are set up this way, then the combined bowing is most prominent in the middle of the bed, and least prominent in the corners.
+Does your printer have steel linear rails bolted to aluminium extrusions? Is the entire printer sealed up? Then you might be suffering from gantry bowing due to bimetallic thermal expansion. Read more in [whoppingpochard's excellent repo](https://github.com/tanaes/whopping_Voron_mods/tree/main/extrusion_backers). I'll keep it short here - if you have your rails mounted on the bottom of your extrusions, as the gantry member heats up, it bows upwards in the middle. If both your X and Y are set up this way, then the combined bowing is most prominent in the middle of the bed, and least prominent in the corners.
 You might have noticed that when you take a bed mesh when the printer is hot, it has a distinct "bowl" shape. This is because the probe has to travel further down to trigger in the middle of the bed, and shorter in the corners - like this:
 
 ![hot_mesh](https://user-images.githubusercontent.com/61467766/132994563-c2806d2c-62d9-4998-b55d-57e2504ad0ca.JPG)
@@ -43,7 +43,7 @@ No, setting RRI to a corner might not be perfect, but it still helps a ton, espe
 
 ### But there has to be another way?!
 
-Yes, there is. You can change the mesh dynamically based on the printer's temperature with ![Virtual Gantry Backers](https://github.com/Deutherius/VGB)! :)
+Yes, there is. You can change the mesh dynamically based on the printer's temperature with [Virtual Gantry Backers](https://github.com/Deutherius/VGB)! :)
 
 ## But my rails are on the top, not on the bottom
 
