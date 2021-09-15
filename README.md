@@ -51,6 +51,19 @@ Yes, there is. You can change the mesh dynamically based on the printer's temper
 
 The effects will be reversed and your bed mesh probably looks like an upside-down bowl. The main point still stands - the middle of the bed is the most thermally unstable reference for Z=0. Change it to a corner and redo the Z calibration.
 
+## Okay smartass, what if some of my rails are on the top and some on the bottom? On the side?
+If one of your gantry member has the rail on top and the other on the bottom, your mesh will look like a saddle, i.e. 
+
+![SADDLE_MESH](https://user-images.githubusercontent.com/61467766/133427734-64aa40a3-d0aa-4214-bbc6-27e5178450ef.png)
+
+In that case, assuming that both your gantry members bend the same amount, and that their center corresponds to the center of the bed, you are probably fine leaving RRI in the center (since the gantry bowing cancels out). No harm setting it in the corner either (or anywhere on the diagonals for that matter).
+
+If you only have top/bottom rails on one gantry member, your mesh should look like a taco, i.e.
+
+![TACO](https://user-images.githubusercontent.com/61467766/133428337-22251576-a37c-4df2-8662-95f41c82d5b0.png)
+
+In that case, leaving RRI in the center is a bad idea. Anywhere on the edges where the one gantry member does not bow is fine. Including the corner. Seeing the trend already?
+
 # Results (yours may vary)
 
 ## RRI in the middle of the bed
