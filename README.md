@@ -37,7 +37,7 @@ If you set up your mesh at hot thermal equilibrium and then try to use it when t
 
 ## There is always a catch
 
-Yes. If your first layer takes a long time and you don't heatsoak long enough, the gantry bowing will increase *during* the first few layers, but your mesh will stay the same. What can you do about it? Ignore it, heatsoak longer or get gantry backers.
+Yes. If your first layer takes a long time and you don't heatsoak long enough, the gantry bowing will increase *during* the first few layers, but your mesh will stay the same. What can you do about it? Ignore it, heatsoak longer or get gantry backers (physical, virtual or both, get *something*).
 
 ### Did you just invalidate this entire thing?
 
