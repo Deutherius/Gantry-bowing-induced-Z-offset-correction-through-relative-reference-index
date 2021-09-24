@@ -52,7 +52,7 @@ Yes, there is. You can change the mesh dynamically based on the printer's temper
 The effects will be reversed and your bed mesh probably looks like an upside-down bowl. The main point still stands - the middle of the bed is the most thermally unstable reference for Z=0. Change it to a corner and redo the Z calibration.
 
 ## Okay smartass, what if some of my rails are on the top and some on the bottom? On the side?
-If one of your gantry member has the rail on top and the other on the bottom, your mesh will look like a saddle, i.e. 
+If one of your gantry members has the rail on top and the other on the bottom, your mesh will look like a saddle, i.e. 
 
 ![SADDLE_MESH](https://user-images.githubusercontent.com/61467766/133427734-64aa40a3-d0aa-4214-bbc6-27e5178450ef.png)
 
